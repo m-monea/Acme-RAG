@@ -1,0 +1,15 @@
+services:
+  rag-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_NAME=llama3.2:1b
+      - EMBED_MODEL=nomic-embed-text
+      - CHROMA_DIR=./chroma_db
+      - COLLECTION_NAME=acme_internal_docs
+      - DOCS_DIR=./docs
+      - TOP_K=4
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./docs:/app/docs
