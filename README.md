@@ -70,7 +70,7 @@ ollama pull nomic-embed-text
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/acme-rag-pro.git
+git clone https://github.com/m-monea/acme-rag-pro.git
 cd acme-rag-pro
 
 python -m venv .venv
